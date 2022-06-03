@@ -12,6 +12,6 @@
 int main(void)
 {
 char err[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-199\n";
-write(2,  err, 58);
+write(1,  err, 60);
 return (1);
 }
