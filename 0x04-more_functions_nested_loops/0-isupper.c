@@ -1,5 +1,5 @@
 #include <ctype.h>
-#include <main.h>
+#include "main.h"
 int _isupper(int c)
 {
 if (isupper(c))
