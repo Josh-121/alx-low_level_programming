@@ -1,11 +1,12 @@
 #include "main.h"
 #include <string.h>
 /**
- * print_rev - function that prints a string, in reverse
+ * puts_half - a function that prints half of a string,
+ * followed by a new line
  *
- * @s: char pointer variable
+ * @str: char pointer variable
  *
- * Return: nothing.
+ * Return: nothing
  */
 void puts_half(char *str)
 {
