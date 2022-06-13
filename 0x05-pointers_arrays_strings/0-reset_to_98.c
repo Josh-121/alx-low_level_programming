@@ -1,12 +1,10 @@
 #include "main.h"
-#include <stdio.h>
 /**
- * 0-reset_to_98.c - pointers
- * @n: number to be printed out by the function
+ * reset_to_98 - a function that takes a pointer to an int and update it
  *
- * Description: return the required result
+ * @n: integer pointer variable
  *
- * Return: return integer value 0
+ * Return: Always 0
  */
 void reset_to_98(int *n)
 {

@@ -1,7 +1,20 @@
 #include "main.h"
-#include <stdio.h>
 
-void _puts(char *str){
+/**
+ * _puts - function that prints a string, followed by \n, to stdout
+ *
+ * @str: char pointer variable
+ *
+ * Return: nothing
+ */
 
-puts(str);
+void _puts(char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		_putchar(str[i]);
+	}
+	_putchar('\n');
 }
