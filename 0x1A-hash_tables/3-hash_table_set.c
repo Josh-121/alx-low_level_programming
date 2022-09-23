@@ -1,11 +1,12 @@
 #include "hash_tables.h"
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-    unsigned long int index = key_index(key, sizeof(ht));
+    unsigned long int index = key_index((const unsigned char *)key, sizeof(ht));
     hash_node_t *node = malloc(sizeof(hash_node_t));
-    node -> key = malloc(sizeof(char)*6);
-    node -> value = malloc(sizeof(char)*6);
-    hash_node_t **array = ht -> array;
+    hash_node_t **array;
+    node -> key = malloc(sizeof(char)*strlen(key));
+    node -> value = malloc(sizeof(char)*strlen(value));
+    array = ht -> array;
 
     if (array[index] != NULL)
     {
