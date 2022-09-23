@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-    unsigned long int index = key_index((const unsigned char *)key, sizeof(ht));
+    unsigned long int index = key_index((const unsigned char *)key, ht->size);
     hash_node_t *node = malloc(sizeof(hash_node_t));
     hash_node_t **array;
     node -> key = malloc(sizeof(char *)*strlen(key) + 4);
