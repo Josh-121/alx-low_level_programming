@@ -9,20 +9,16 @@
 int main(void)
 {
     hash_table_t *ht;
-    int i = 0;
 
     ht = hash_table_create(1024);
-    hash_table_set(ht, "hetairas", "cool");
-    hash_table_set(ht, "mentioner", "yeah");
-
-    while(i < (int)ht->size)
-    {
-        if(ht->array[i] != NULL)
-            printf("%d %s--------%s------%s\n",i,ht->array[i]->key,ht->array[i]->value,ht->array[i]->next->value);
-        else
-            printf("%d NULL\n",i);
-        i++ ;
-    }
-
+    hash_table_print(ht);
+    hash_table_set(ht, "c", "fun");
+    hash_table_set(ht, "python", "awesome");
+    hash_table_set(ht, "Bob", "and Kris love asm");
+    hash_table_set(ht, "N", "queens");
+    hash_table_set(ht, "Asterix", "Obelix");
+    hash_table_set(ht, "Betty", "Cool");
+    hash_table_set(ht, "98", "Battery Street");
+    hash_table_print(ht);
     return (EXIT_SUCCESS);
 }
